@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestion de Pagos</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <h1>Gestion de los Pagos</h1>
+
+    <div id="ingresoCupo">
+        <h2>Ingreso de Cupo</h2>
+        <form id="ingresoForm">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" required><br>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" required><br>
+
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor" required><br>
+
+            <label for="recibe">Recibe:</label>
+            <input type="text" id="recibe" required><br>
+
+            <label for="pagoPor">Pago por:</label>
+            <input type="text" id="pagoPor" required><br>
+
+            <button type="button" onclick="registrarCupo()">Registrar Cupo</button>
+        </form>
+    </div>
+
+    <div id="actualizacionCupo">
+        <h2>Actualizacion de Cupo</h2>
+        <form id="actualizacionForm">
+            <label for="fechaActualizacion">Fecha:</label>
+            <input type="date" id="fechaActualizacion" required><br>
+    
+            <label for="horaActualizacion">Hora:</label>
+            <input type="time" id="horaActualizacion" required><br>
+    
+            <label for="valorAnterior">Valor Anterior:</label>
+            <input type="number" id="valorAnterior" required><br>
+    
+            <label for="valorActual">Valor Actual:</label>
+            <input type="number" id="valorActual" required><br>
+    
+            <label for="empleado">Empleado:</label>
+            <input type="text" id="empleado" required><br>
+    
+            <button type="button" onclick="actualizarCupo()">Actualizar Cupo</button>
+        </form>
+    </div>
+
+    <div id="versionamiento">
+        <h2>Versionamiento de Transacciones</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Valor</th>
+                    <th>Recibe</th>
+                    <th>Pago por</th>
+                </tr>
+            </thead>
+            <tbody id="transaccionesTableBody">
+                <!-- Aquí va la tabla de transacciones -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="valorTotal">
+        <h2>Valor Total</h2>
+        <p id="totalValue">0</p>
+    </div>
+
+    <div id="reportes">
+        <h2>Reportes</h2>
+        <h3>Valores Recaudados por Emprendimientos</h3>
+        <ul id="emprendimientosList">
+            <!-- Aquí va los valores recaudados por emprendimientos -->
+        </ul>
+
+        <h3>Valores para la Fundacion</h3>
+    <ul id="fundacionList">
+        <!-- Aquí va los valores para la fundación -->
+    </ul>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
