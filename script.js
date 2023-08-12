@@ -36,7 +36,6 @@ function actualizarCupo() {
     document.getElementById("totalValue").textContent = totalValue;
 
     // tabla de versionamiento
-    totalValue += valorActual;
     const newRow = transaccionesTableBody.insertRow();
     newRow.insertCell().textContent = fecha;
     newRow.insertCell().textContent = hora;
