@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Bienvenido Compras de comida</h1>
+            <div id="loginSection" class="inicioo">
+                <button id="loginButton" class="btn-login">Iniciar Sesión</button>
+                <img src="imagenes/fondo-inicio.jpg" alt="">
+                <strong><p>Toque el boton de iniciar sesion para poder ingresar a la pagina</p></strong>
+            </div>
+            <div id="userSection" style="display: none;">
+                <p>Usuario: <span id="usernamePlace"></span></p>
+                <button id="logoutButton" class="btn-logout">Cerrar Sesión</button>
+            <p>Cupo Disponible: $<span id="cupoDisponible"></span></p>
+            <div class="catalogo">
+                <div class="comida">
+                    <img src="imagenes/hamburguesa.jpg" alt="Comida 1">
+                    <div class="info">
+                        <p class="nombre">Hamburguesa</p>
+                        <p class="precio">$10.00</p>
+                        <button class="btn-comprar" data-precio="10.00">Comprar</button>
+                    </div>
+                </div>
+                <div class="comida">
+                    <img src="imagenes/pizza.jfif" alt="Comida 2">
+                    <div class="info">
+                        <p class="nombre">Pizza</p>
+                        <p class="precio">$15.00</p>
+                        <button class="btn-comprar" data-precio="15.00">Comprar</button>
+                    </div>
+                </div>
+                <div class="comida">
+                    <img src="imagenes/ensalada.jpg" alt="Comida 2">
+                    <div class="info">
+                        <p class="nombre">Ensalada</p>
+                        <p class="precio">$11.00</p>
+                        <button class="btn-comprar" data-precio="11.00">Comprar</button>
+                    </div>
+                </div>
+                <div class="comida">
+                    <img src="imagenes/encabollado.jpg" alt="Comida 2">
+                    <div class="info">
+                        <p class="nombre">Encebollado</p>
+                        <p class="precio">$2.75</p>
+                        <button class="btn-comprar" data-precio="2.75">Comprar</button>
+                    </div>
+                </div>
+                <div class="comida">
+                    <img src="imagenes/costilla.jpg" alt="Comida 2">
+                    <div class="info">
+                        <p class="nombre">Costilla a la BBQ</p>
+                        <p class="precio">$12.00</p>
+                        <button class="btn-comprar" data-precio="12">Comprar</button>
+                    </div>
+                </div>
+                <div class="comida">
+                    <img src="imagenes/tomahow.jpg" alt="Comida 2">
+                    <div class="info">
+                        <p class="nombre">Tomahawk de Res</p>
+                        <p class="precio">$20.00</p>
+                        <button class="btn-comprar" data-precio="20">Comprar</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
