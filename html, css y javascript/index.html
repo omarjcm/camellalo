@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Vendedor</title>
+</head>
+<body>
+    <h1>Vendedor</h1>
+    <button id="scanButton">Escanear Código QR del Comprador</button>
+    <div id="buyerInfo">
+        <p>Usuario: <span id="buyerUsername"></span></p>
+        <p>Cupo: <span id="buyerCupo"></span></p>
+    </div>
+    <h2>Seleccionar Producto</h2>
+    <div id="productGallery">
+        
+        <img src="comida.jpg" alt="Producto 1" class="productImage" data-product="Producto 1">
+        <img src="zapatos.png" alt="Producto 2" class="productImage" data-product="Producto 2">
+        
+    </div>
+    <div id="galleryControls">
+        <button id="prevButton">&lt;</button>
+        <button id="nextButton">&gt;</button>
+    </div>
+    <button id="sellButton">Vender</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>
