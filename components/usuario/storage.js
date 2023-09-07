@@ -22,7 +22,7 @@ async function update_usuario( usuario ) {
         objeto.email = usuario.email
         objeto.celular = usuario.celular
         objeto.usuari = usuario.usuari
-        objeto.clave = usuario.clave
+        objeto.contraseña = usuario.contraseña
     
         return resultado = await objeto.save()    
     } else {

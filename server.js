@@ -4,7 +4,6 @@ const bodyParser = require('body-parser')
 const bd = require('./bd')
 const config = require('./config')
 const router = require('./network/router')
-
 bd( config.DB_URL )
 
 var app = express()

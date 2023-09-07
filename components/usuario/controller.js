@@ -8,7 +8,7 @@ function get_usuario( filtroUsuario ) {
 
 function add_usuario( usuario) {
     return new Promise((resolve, reject) => {
-        if (!usuario.nombre || !usuario.email || !usuario.celular || !usuario.usuari || !usuario.clave) {
+        if (!usuario.nombre || !usuario.email || !usuario.celular || !usuario.usuari || !usuario.contraseña) {
             return reject('No hay datos suficientes.')
         }
         storage.add( usuario )

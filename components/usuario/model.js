@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+mongoose.set('strictQuery', false);
 
 const req_string = {
     type: String,
@@ -15,9 +16,9 @@ const usuario_schema = new Schema({
     
     nombre: req_string,
     email: req_string,
-    celular:req_number,
+    celular:req_string,
     usuari:req_string,
-    clave:req_string,
+    contraseña:req_string,
 
     })
 
