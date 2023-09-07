@@ -19,7 +19,6 @@ document.getElementById("miBoton2").addEventListener("click", function () {
   window.location.href = "index2.html";
 });
 
-
 function validateForm(nombre,email,celular,usuario,contraseña) {
   
 $.ajax({
