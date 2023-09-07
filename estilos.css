@@ -1,49 +1,194 @@
-body {
-    font-family: Arial, sans-serif;
+.container {
+    display: grid;
+    grid-template: 150px 1fr 50px / 200px 1fr;
+    grid-template-areas: "contenedor ingresoCupo" "left content" "footer footer";
+    grid-gap: 5px;
+    height: 100vh;
 }
+#contenedor {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
 
-h1, h2 {
-    color: #333;
+    padding: 20px;
+    margin: 0 auto; 
+    max-width: 1200px; 
+    width: 100%;
+    margin-bottom: 20px;
 }
-
-form {
+#ingresoCupo {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto; 
+    max-width: 600px; 
+    width: 100%;
     margin-bottom: 20px;
 }
 
-label {
-    display: inline-block;
-    width: 100px;
+#ingresoCupo h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+#ingresoForm label {
     font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #555555;
 }
 
-input {
-    margin-bottom: 10px;
-    padding: 5px;
+#ingresoForm input[type="text"],
+#ingresoForm input[type="number"],
+#ingresoForm input[type="date"],
+#ingresoForm input[type="time"],
+#ingresoForm select {
+    width: 100%;
+    max-width: 570px;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s;
 }
 
-button {
-    padding: 5px 10px;
-    background-color: #333;
+#ingresoForm input:focus,
+#ingresoForm select:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #ffffff;
+}
+
+#ingresoForm button {
+    padding: 12px 24px;
+    background-color: #007bff;
     color: white;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #555;
+#ingresoForm button:hover {
+    background-color: #0056b3;
+}
+
+#ingresoForm button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
 }
 
 #actualizacionCupo {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto; 
+    max-width: 600px; 
+    width: 100%;
     margin-bottom: 20px;
 }
+
+#actualizacionCupo h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+#actualizacionForm label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #555555;
+}
+
+#actualizacionForm input[type="text"],
+#actualizacionForm input[type="number"],
+#actualizacionForm input[type="date"],
+#actualizacionForm input[type="time"],
+#actualizacionForm select {
+    width: 100%;
+    max-width: 580px;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+#actualizacionForm input:focus,
+#actualizacionForm select:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #ffffff;
+}
+
+#actualizacionForm button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#actualizacionForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para Versionamiento */
+#versionamiento {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto; 
+    max-width: 900px; 
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#versionamiento h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+#transaccionesTableBody {
+    border-top: 1px solid #cccccc;
+}
+
+#transaccionesTableBody th,
+#transaccionesTableBody td {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    text-align: left;
+}
+
+#transaccionesTableBody th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+#transaccionesTableBody tr:last-child td {
+    border-bottom: none;
+}
+
 
 #versionamiento table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate; /* Separación entre celdas */
+    border-spacing: 5px; /* Espacio entre celdas */
     margin-bottom: 20px;
 }
 
-#versionamiento th, #versionamiento td {
+#versionamiento th,
+#versionamiento td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
@@ -53,12 +198,70 @@ button:hover {
     background-color: #f2f2f2;
 }
 
-#reportes ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* estilos para Valor Total y Reportes  */
+#valorTotal {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto; 
+    margin-bottom: 20px;
+    max-width: 1000px; 
 }
 
-#reportes li {
+#valorTotal h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+#totalValue {
+    font-size: 32px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Estilos para Reportes */
+/* Estilos para Reportes en la esquina inferior derecha */
+#reportes {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#reportes h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+#emprendimientosValue,
+#fundacionValue {
+    list-style: none;
+    margin-left: 20px;
+    padding: 0; /* Elimina el espacio interior por defecto en listas */
+}
+
+#emprendimientosValue li,
+#fundacionValue li {
     margin-bottom: 10px;
+    color: #555555;
+    position: relative;
+    padding-left: 20px;
+}
+
+#emprendimientosValue li::before,
+#fundacionValue li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-weight: bold;
 }
