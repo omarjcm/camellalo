@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,300&family=Josefin+Sans:ital@1&family=Kanit:wght@600&family=Peralta&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg , #bab9cd 10%,transparent 11%, transparent 89% , #bab9cd 90%),linear-gradient(135deg , #bab9cd 10%,transparent 11%, transparent 89% , #bab9cd 90%),radial-gradient(circle, transparent 25%, #ffffff  26%),linear-gradient(45deg, transparent 46%, #bab9cd 47%, #bab9cd 52%, transparent 53%), linear-gradient(135deg, transparent 46%, #bab9cd 47%, #bab9cd 52%, transparent 53%);
+    background-size: 2em 2em;
+    background-color: #ffffff;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.agregar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #538beb;
+    background-color: #538beb;
+    border-radius: 15px;
+    width: 200px;
+    height: 45px;
+    margin-top: 15px;
+    margin-left: 15px;
+    transition: all 300ms ease-in-out;
+}
+
+#a2 {
+    display: none;
+}
+
+.agregar:hover{
+    box-shadow: rgba(21, 101, 205, 0.4) -5px 5px, rgba(48, 102, 197, 0.3) -10px 10px, rgba(44, 94, 181, 0.2) -15px 15px, rgba(40, 85, 164, 0.1) -20px 20px;
+    width: 250px;
+    height: 55px;
+    transition: all 300ms ease-out;
+    transform: scale(1.1);
+}
+
+.agregar:hover #a2 {
+    display: block;
+}
+
+.agregar:hover #a1 {
+    display: none;
+}
+
+.agregar a {
+    text-decoration: none;
+    font-family: "Faune Text It";
+    font-size: 20px;
+    color: white;
+    margin-left: 15px;
+}
+
+.agregar:hover > a {
+    color: white;
+    font-family: "Faune Text It";
+    font-size: 21px;
+    font-weight: bold;
+}
+
+h1 {
+    height: 100px;
+    width: auto;
+    padding-left: 30px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='auto' height='100' preserveAspectRatio='none' viewBox='0 0 1440 100'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1003%26quot%3b)' fill='none'%3e%3crect width='1440' height='100' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M 0%2c5 C 57.6%2c11.4 172.8%2c35.4 288%2c37 C 403.2%2c38.6 460.8%2c12.6 576%2c13 C 691.2%2c13.4 748.8%2c38.4 864%2c39 C 979.2%2c39.6 1036.8%2c18.2 1152%2c16 C 1267.2%2c13.8 1382.4%2c25.6 1440%2c28L1440 100L0 100z' fill='%23184a7e'%3e%3c/path%3e%3cpath d='M 0%2c89 C 96%2c85.4 288%2c71.8 480%2c71 C 672%2c70.2 768%2c86 960%2c85 C 1152%2c84 1344%2c69.8 1440%2c66L1440 100L0 100z' fill='%232264ab'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1003'%3e%3crect width='1440' height='100' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    color: #E1FAF9;
+    font-family: 'Kanit', sans-serif;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 310px;
+    height: auto;
+    background-color: #6bceec;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.nombre-emp {
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    flex-direction: column-reverse;
+    word-break: break-all;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Peralta', serif;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    padding: 10px;
+    border-bottom: 3px solid black;
+}
+
+.logo-emp {
+    justify-content: center;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+.img-serv {
+    width: 200px;
+    height: 175px;
+    margin-bottom: 15px;
+}
+
+.detalle-producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nombre_serv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-break: break-all;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: 'Imbue', serif;
+    text-transform: capitalize;
+    border-bottom: 5px dotted black;
+}
+
+.descripcion {
+    word-break: break-all;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: 'Imbue', serif;
+    text-transform: capitalize;
+}
+
+.datos {
+    display: flex;
+    word-break: break-all;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: 'Imbue', serif;
+    text-transform: capitalize;
+}
+
+.datos p:first-child {
+    margin-right: 60px;
+}
+
+
+.stock-valor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas: 
+    "input input"
+    "btn1 btn2";
+}
+
+.stock-valor input {
+    display: grid;
+    grid-area: input;
+    padding: 5px;
+    margin: 5px auto 5px auto;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 75px
+}
+.editar {
+    grid-area: btn2;
+}
+.comprar {
+    grid-area: btn1;
+}
+.comprar, .editar {
+    width: 100px;
+    padding: 10px;
+    margin: 5px auto 5px auto;
+    border-radius: 30px;
+    background-color: #2a6293;
+    border: 1px solid #2a6293;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 300ms all ease-in;
+    font-weight: bold;
+    color: white;
+}
+
+.comprar:hover, .editar:hover {
+    background-color: #89adcd;
+    border: 1px solid #89adcd;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: 300ms all ease-in;
+    color: black;
+}
+
+.comprar:disabled, .editar:disabled {
+    pointer-events: none;
+    background-color: #2a6293 !important;
+    border: 1px solid #2a6293 !important;
+    box-shadow: none !important;
+    color: white !important;
+}
+
+.comprar:disabled:hover, .editar:disabled:hover {
+    background-color: #2a6293 !important;
+    border: 1px solid #2a6293 !important;
+    box-shadow: none !important;
+    cursor: not-allowed !important;
+}
+
+
+/*Editar*/
+#editarForm {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 410px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+#editarForm label {
+    font-family: "Faune Text It";
+    font-size: 18px;
+    display: grid;
+    margin-bottom: 20px;
+}
+
+#editarForm input {
+    height: 25px;
+    resize: none;
+}
+
+#editarForm textarea {
+    height: 75px;
+    resize: none;
+}
+
+#guardar {
+    width: 100px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #2e9d72;
+    border: 1px solid #2e9d72;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 300ms all ease-in;
+    font-weight: bold;
+    color: white;
+}
+
+#guardar:hover {
+    background-color: #41c895;
+    border: 1px solid #41c895;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: 300ms all ease-in;
+    color: black;
+}
+
+#cancelar {
+    width: 100px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #c73232;
+    border: 1px solid #c73232;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 300ms all ease-in;
+    font-weight: bold;
+    color: white;
+}
+
+#cancelar:hover {
+    background-color: #e86b6b;
+    border: 1px solid #e86b6b;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: 300ms all ease-in;
+    color: black;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}

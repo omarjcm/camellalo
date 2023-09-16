@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ingreso de Datos</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Pagina de Registros</h1>
+            <div class="catalogo">
+                <i class="fa-solid fa-cart-shopping fa-xl" id="c1" style="color: #ffffff;"></i>
+                <i class="fa-solid fa-cart-shopping fa-bounce fa-2xl" id="c2" style="color: #ffffff;"></i>
+                <a href="./catalogo.html">Catalogo</a>
+            </div>
+            <form id="registration-form" enctype="multipart/form-data">
+                <h2>Registro del Emprendimiento</h2>
+                <input type="text" name="nombre_emp" placeholder="Nombre del Emprendimiento" required />
+                <input type="file" name="logo_emp" accept="image/*" required>
+                <h2>Registro del Producto o Servicio</h2>
+                <input type="text" name="nombre_serv" placeholder="Nombre del Servicio o Producto" required />
+                <input type="file" name="img_serv" accept="image/*" required>
+                <textarea type="text" name="descripcion" maxlength="100" placeholder="Describa su Servicio o Producto (100 palabras max.)" required></textarea>
+                <input type="number" name="stock" min="0" placeholder="Ingrese la cantidad en stock" required />
+                <input type="number" name="valor" min="0" step=0.01 placeholder="Digite el precio" required />
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+        <script src="./script.js"></script>
+        <script src="https://kit.fontawesome.com/6e71dc2274.js" crossorigin="anonymous"></script>
+    </body>
+</html>
