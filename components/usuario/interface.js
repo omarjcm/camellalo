@@ -29,4 +29,10 @@ route.delete('/', function(req, res) {
         .catch( (error) => response.error(req, res, error, 500) )
 })
 
+route.post('/login', function(req, res) {
+    controller.login_usuario( req.body )
+        .then( (data) => response.success(req, res, data, 200))
+        .catch( (error) => response.error(req, res, error, 401) )
+})
+
 module.exports = route

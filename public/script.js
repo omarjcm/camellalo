@@ -10,18 +10,6 @@
 
   // Realiza una solicitud AJAX para enviar el dato
   validateForm(nombre,email,celular,usuario,contraseña);
-  window.location.href = "index3.html";
-});
-
-
-document.getElementById("miBoton2").addEventListener("click", function () {
-  // Redirige a la página index2.html al hacer clic en el botón "Siguiente"
-  window.location.href = "index2.html";
-});
-
-document.getElementById("miBoton3").addEventListener("click", function () {
-  // Redirige a la página index2.html al hacer clic en el botón "Siguiente"
-  window.location.href = "prueba.html";
 });
 
 
@@ -48,4 +36,8 @@ $.ajax({
     console.log(error);
   });
 
+  window.location.href = "index3.html";
 }
+
+
+

@@ -1,5 +1,6 @@
 const storage = require('./storage')
 
+
 function get_usuario( filtroUsuario ) {
     return new Promise((resolve, reject) => {
         resolve( storage.get( filtroUsuario ) )
@@ -34,9 +35,20 @@ function delete_usuario( usuari ) {
     })
 }
 
+function login_usuario(credenciales) {
+    return new Promise((resolve, reject) => {
+      if (!credenciales.usuari || !credenciales.contraseña) {
+            return reject('Usuario y contraseña son obligatorios.');
+      }
+      resolve( storage.get( credenciales ) )
+      
+    });
+  }
+
 module.exports = {
     get_usuario,
     add_usuario,
     update_usuario,
     delete_usuario,
+    login_usuario
 }

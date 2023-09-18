@@ -22,5 +22,15 @@ const usuario_schema = new Schema({
 
     })
 
+usuario_schema.statics.encryptPassword = async(contraseña)=> {
+    const salt = await bcrypt.genSalt(10)
+    return await bcrypt.hash(contraseña,salt)
+}
+    
+usuario_schema.statics.comparePassword = async(contraseña, contraseñaValida)=> {
+    return await bcrypt.compare(contraseña, contraseñaValida)
+    
+}
+
 const model = mongoose.model('usuario', usuario_schema)
 module.exports = model
