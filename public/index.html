@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!------
+    index1= registrarse 
+index2= ingrese usuario y contraseña
+index3= pestaña que solo sirve para decir 'registrado con exito' y con un solo btn que te manda al index2
+    
+    
+    -------->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Bienvenido a mi Formulario</title>
+</head>
+
+<body>
+    
+    <div class="container-form sign-up">
+        <!---------
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido a DaniCodex</h2>
+                <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
+                <button class="sign-up-btn">Iniciar Sesion</button>
+            </div>
+            ---->
+        </div>
+        <form class="formulario" id="formulario1">
+            <h2 class="create-account">Crear una cuenta</h2>
+            <!---------Esconder iconos de redes sociales
+            <div class="iconos">
+                
+                <div class="border-icon" >
+                    <i class='bx bxl-instagram' ></i>
+                </div>
+                <div class="border-icon">
+                    <i class='bx bxl-linkedin' ></i>
+                </div>
+                <div class="border-icon">
+                    <i class='bx bxl-facebook-circle' ></i>
+                </div>
+            </div>
+            ---------------->
+        
+            <p class="cuenta-gratis">Crear una cuenta gratis</p>
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="celular" placeholder="Celular" required>
+            <input type="text" id="usuario" placeholder="Usuario" required>
+            <input type="password" id="contraseña" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+            
+            <!---------Ingresar para abrir la ventana de Ingresar
+            si ya tiene cuenta-->
+            <br>
+            <p>Si ya tiene una cuenta, ingrese</p>
+            <!--------esta puesto en el script lo que va a hacer miboton-->
+            <a href="index2.html">Ingresar</a>
+        </form>
+
+       
+
+
+
+    </div>
+   
+    <script src="script.js"></script>
+</body>
+
+</html>
